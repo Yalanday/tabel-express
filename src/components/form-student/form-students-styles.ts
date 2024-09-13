@@ -21,6 +21,19 @@ export const Wrapper = styled.div`
         border-radius: 0.5rem;
     }
     
+    img {
+        display: block;
+        margin: 0 auto;
+        width: 205px;
+        height: 200px;
+        margin-bottom: 1rem;
+    }
+    
+    p {
+        margin: 0 0 1rem;
+        text-align: center;
+    }
+
     Button {
         display: block;
         margin: 0 auto;

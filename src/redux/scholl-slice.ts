@@ -1,24 +1,24 @@
 import {createSlice} from "@reduxjs/toolkit";
 
 type InitialStateType = {
-    isAuthenticated: boolean
+    scholl: boolean | null
 }
 
 const initialState: InitialStateType= {
-    isAuthenticated: true,
+    scholl:  null,
 }
 
-const authenticatedSlice = createSlice({
-    name: 'authenticated',
+const schollSlice = createSlice({
+    name: 'scholl',
     initialState,
     reducers: {
-        setAuthenticated: (state, action) => {
-            state.isAuthenticated = action.payload
+        setScholl: (state, action) => {
+            state.scholl = action.payload
         },
     }
 })
 
-export const {setAuthenticated} = authenticatedSlice.actions;
+export const {setScholl} = schollSlice.actions;
 
-const authenticatedReducer = authenticatedSlice.reducer;
-export default authenticatedReducer;
+const schollSliceReducer = schollSlice.reducer;
+export default schollSliceReducer;

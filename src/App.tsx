@@ -1,26 +1,23 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import FormRegistration from "./components/form-registration/form-registration";
+import {useAppSelector} from "./hooks/redux-hooks";
+import FormSelectSchool from "./components/form-select-school/form-select-school";
+import FormStudent from "./components/form-student/form-student";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+    const {isAuthenticated} = useAppSelector(state => state.authenticated);
+    const {scholl} = useAppSelector(state => state.scholl);
+    const {student} = useAppSelector(state => state.student);
+
+
+    return (
+        <div className="App">
+            {isAuthenticated === false && <FormRegistration isAuthenticated={isAuthenticated}/>}
+            {scholl === false && <FormSelectSchool scholl={scholl}/>}
+            {student === false &&<FormStudent/>}
+        </div>
+    );
 }
 
 export default App;
