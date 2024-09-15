@@ -1,5 +1,5 @@
 import React from "react";
-import {Wrapper} from "./form-students-styles";
+import {Wrapper} from "../start-rorm/form-start-styles";
 import {Select, Form, Button} from 'antd';
 import studentsValues from "../../mocks/students";
 
@@ -24,7 +24,11 @@ type StudentType = {
     img: string
 }
 
-const FormStudent = () => {
+type Props = {
+    autnStatusToggle: (authState: boolean) => void
+}
+
+const FormStudent: React.FC<Props> = ({autnStatusToggle}) => {
 
     const [student, setStudent] = React.useState<StudentType | null>(null);
     const findStudent = (val: string) => {
@@ -35,7 +39,6 @@ const FormStudent = () => {
         })
     }
 
-
     const onChange = (value: string) => {
         console.log(`selected ${value}`);
         findStudent(value);
@@ -43,8 +46,8 @@ const FormStudent = () => {
 
     const onFinish = (values: any) => {
         console.log(values);
+        autnStatusToggle(true)
     };
-
 
     return (
         <Wrapper>
@@ -73,7 +76,7 @@ const FormStudent = () => {
                 {student === null && <img src={'./img/placeholder-img.jpg'} alt={''}/>}
                 <p>{student?.label || 'Имя'}</p>
 
-                <Form.Item style={{marginBottom: '0'}}>
+                <Form.Item >
                     <Button type="primary" htmlType="submit">Выбрать</Button>
                 </Form.Item>
             </Form>

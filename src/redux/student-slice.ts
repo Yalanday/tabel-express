@@ -5,7 +5,7 @@ type InitialStateType = {
 }
 
 const initialState: InitialStateType= {
-    student:  null,
+    student:  true,
 }
 
 const studentSlice = createSlice({

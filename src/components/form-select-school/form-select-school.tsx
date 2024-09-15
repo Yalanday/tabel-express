@@ -1,6 +1,6 @@
 import React from 'react';
 import {Select, Form, Button} from 'antd';
-import {Wrapper} from "./form-select-school-styles";
+import {Wrapper} from "../start-rorm/form-start-styles";
 import {schollValues, classValues} from "../../mocks/scholl-values";
 import {useAppDispatch} from "../../hooks/redux-hooks";
 import {setScholl} from "../../redux/scholl-slice";
@@ -12,11 +12,9 @@ const layout = {
     wrapperCol: {span: 18},
 };
 
-
 const validateMessages = {
     required: 'Поле является обязательным',
 };
-
 
 const onChange = (value: string) => {
     console.log(`selected ${value}`);
@@ -73,7 +71,7 @@ const FormSelectSchool: React.FC<FormSelectSchoolProps> = ({scholl}) => {
                         options={classValues}
                     />
                 </Form.Item>
-                <Form.Item style={{marginBottom: '0'}}>
+                <Form.Item >
                     <Button type="primary" htmlType="submit">Выбрать</Button>
                 </Form.Item>
             </Form>

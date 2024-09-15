@@ -1,6 +1,6 @@
 import React from 'react';
 import {Button, Form, Input} from 'antd';
-import {Wrapper} from "./form-registration-styles";
+import {Wrapper} from "../start-rorm/form-start-styles";
 import {useAppDispatch} from "../../hooks/redux-hooks";
 import {setAuthenticated} from "../../redux/authenticated-slice";
 import {setScholl} from "../../redux/scholl-slice";
