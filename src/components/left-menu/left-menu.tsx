@@ -8,9 +8,6 @@ const menuItems = [
     {label: 'Предметы', path: '/predmets/'},
     {label: 'Домашнее задание', path: '/home-tasks/'},
     {label: 'Учитель онлайн', path: '/prepod-online/'},
-    {label: 'Родительский комитет', path: '/father-commitet/'},
-    {label: 'Кружки и секции', path: '/sections/'},
-    {label: 'Отзыва и предложения', path: '/reviews-and-suggestions/'},
     {label: 'Ваш сотрудник ПДН', path: '/kinder-police/'},
     {label: 'Контакты', path: '/contacts/'},
 ]

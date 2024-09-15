@@ -12,6 +12,7 @@ const HomeTasks = () => {
 
     return (
         <>
+            <h1 style={{color: '#ffffff', marginTop: 0}}>Домашнее задание</h1>
             <List
                 grid={{
                     gutter: 16,

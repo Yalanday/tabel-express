@@ -9,9 +9,6 @@ import Calendar from "../calendar/calendar";
 import Predmets from "../predmets/predmets";
 import HomeTasks from "../home-tasks/home-tasks";
 import PrepodOnline from "../prepod-online/prepod-online";
-import FatherCommitet from "../father-commitet/father-commitet";
-import Sections from "../sections/sections";
-import ReviewsAndSuggestions from "../reviews-and-suggestions/reviews-and-suggestions";
 import KinderPolice from "../kinder-police/kinder-police";
 import Contacts from "../contacts/contacts";
 import PredmetDetail from "../predmets/predmet-detail";
@@ -37,9 +34,6 @@ const Main: React.FC = () => {
                                 <Route path="/predmets" element={<Predmets/>}/>
                                 <Route path="/home-tasks" element={<HomeTasks/>}/>
                                 <Route path="/prepod-online" element={<PrepodOnline/>}/>
-                                <Route path="/father-commitet" element={<FatherCommitet/>}/>
-                                <Route path="/sections" element={<Sections/>}/>
-                                <Route path="/reviews-and-suggestions" element={<ReviewsAndSuggestions/>}/>
                                 <Route path="/kinder-police" element={<KinderPolice/>}/>
                                 <Route path="/contacts" element={<Contacts/>}/>
                                 <Route path="/predmets/detail/*" element={<PredmetDetail/>}/>
