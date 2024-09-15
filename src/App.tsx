@@ -1,21 +1,23 @@
 import React from 'react';
-import FormRegistration from "./components/form-registration/form-registration";
-import {useAppSelector} from "./hooks/redux-hooks";
-import FormSelectSchool from "./components/form-select-school/form-select-school";
-import FormStudent from "./components/form-student/form-student";
+import FormStartHoc from "./components/start-rorm/form-start-hoc";
+import {useAppSelector, useAppDispatch} from "./hooks/redux-hooks";
+import {setAuthStatus} from "./redux/authStatus-slice";
+import Main from "./components/main/main";
 
 function App() {
+    const {authStatus} = useAppSelector((state) => state.authStatus);
+    const dispatch = useAppDispatch();
+    const autnStatusToggle = (authState: boolean) => dispatch(setAuthStatus(authState));
 
-    const {isAuthenticated} = useAppSelector(state => state.authenticated);
-    const {scholl} = useAppSelector(state => state.scholl);
-    const {student} = useAppSelector(state => state.student);
 
-
+    console.log(authStatus);
+// TODO не забыь потом поствить верные определения authStatus для рендера
     return (
         <div className="App">
-            {isAuthenticated === false && <FormRegistration isAuthenticated={isAuthenticated}/>}
-            {scholl === false && <FormSelectSchool scholl={scholl}/>}
-            {student === false &&<FormStudent/>}
+            {/*{!authStatus && <FormStartHoc autnStatusToggle={autnStatusToggle}/>}*/}
+            {authStatus && <FormStartHoc autnStatusToggle={autnStatusToggle}/>}
+            {/*{authStatus && <Main/>}*/}
+            {!authStatus && <Main/>}
         </div>
     );
 }
