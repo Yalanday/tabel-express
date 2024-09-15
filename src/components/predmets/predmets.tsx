@@ -12,6 +12,7 @@ const Predmets = () => {
 
     return (
         <>
+            <h1 style={{color: '#ffffff', marginTop: 0}}>Предметы</h1>
             <List
                 grid={{
                     gutter: 16,

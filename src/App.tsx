@@ -14,10 +14,10 @@ function App() {
 // TODO не забыь потом поствить верные определения authStatus для рендера
     return (
         <div className="App">
-            {/*{!authStatus && <FormStartHoc autnStatusToggle={autnStatusToggle}/>}*/}
-            {authStatus && <FormStartHoc autnStatusToggle={autnStatusToggle}/>}
-            {/*{authStatus && <Main/>}*/}
-            {!authStatus && <Main/>}
+            {!authStatus && <FormStartHoc autnStatusToggle={autnStatusToggle}/>}
+            {/*{authStatus && <FormStartHoc autnStatusToggle={autnStatusToggle}/>}*/}
+            {authStatus && <Main/>}
+            {/*{!authStatus && <Main/>}*/}
         </div>
     );
 }
